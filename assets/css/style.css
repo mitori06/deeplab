@@ -1,6 +1,5 @@
 body{
     margin: 0;
-    body {
     font-family:
       "Noto Sans JP",
       -apple-system,
@@ -11,8 +10,6 @@ body{
       "Yu Gothic",
       "Meiryo",
       sans-serif;
-}
-
 }
 
 .target {
