@@ -17,26 +17,36 @@
 
   <link rel="preload" href="./assets/css/style.css" as="style" />
   <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <!-- フォント指定 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+<!-- テスト環境用ログインフォーム -->
 <script type="module">
   import { requireAuth } from "./assets/js/auth.js";
   requireAuth();
 </script>
+<!-- 本番の時に消す -->
+
   <div class="pc-shell">
     <!-- 左 -->
     <aside class="pc-shell__left">
-      <img src="./assets/img/logo_tate.webp" alt="WIDGET" class="pc-shell__logo">
+      <a href="#top">
+      <img src="./assets/img/logo_tate.webp" alt="WIDGET" class="pc-shell__logo target">
+      </a>
     </aside>
 
     <div class="container">
       <header class="header">
         <div class="container header_inner">
-          <a href="./index.html#top" class="logo">
+          <a href="./index.html#top" class="logo target">
             <img src="./assets/img/logo_yoko.webp" alt="VIDGET" width="150" height="40" />
           </a>
-          <a href="#contact" class="contact_button">
+          <a href="#contact" class="contact_button target">
             <img src="./assets/img//icon/mail.svg" width="24" height="24" />
             お問い合わせ
           </a>
@@ -53,7 +63,7 @@
           <div class="cta-frame">
             <img src="./assets/img/06-cta-button.webp" alt="資料請求への導線" width="750" height="900">
 
-            <a href="#contact" class="cta-btn">
+            <a href="#contact" class="cta-btn target">
               資料請求へ
               <img src="./assets/img/icon/expand_circle_right.svg" alt="" class="cta-btnIcon">
             </a>
@@ -94,7 +104,7 @@
           <div class="cta-frame">
             <img src="./assets/img/06-cta-button.webp" alt="資料請求への導線" width="750" height="900">
 
-            <a href="#contact" class="cta-btn">
+            <a href="#contact" class="cta-btn target">
               資料請求へ
               <img src="./assets/img/icon/expand_circle_right.svg" alt="" class="cta-btnIcon">
             </a>
@@ -177,7 +187,6 @@
                 </p>
               </div>
             </details>
-
             <details class="faq__item">
               <summary class="faq__q">
                 <span class="faq__qleft">
@@ -195,8 +204,29 @@
                 </p>
               </div>
             </details>
+
+
+            <details class="faq__item">
+              <summary class="faq__q">
+                <span class="faq__qleft">
+                  <span class="faq__badge">Q</span>
+                  <span class="faq__qtext">動画を持っていないのですが、導入できますか？</span>
+                </span>
+                <span class="faq__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq__a">
+                <div class="faq__ahead">
+                  <span class="faq__badge faq__badge--a">A</span>
+                </div>
+                <p class="faq__atext">
+                  はい、問題なく導入できます。<br>動画をお持ちでない場合は、動画制作が可能な企業様をご紹介させていただきます。詳細については、お問い合わせにて個別にご案内いたします。
+                </p>
+              </div>
+            </details>
+
           </div>
         </section>
+
         <section class="contact" id="contact" aria-label="お問い合わせ">
           <div class="contact__head">
             <h2 class="contact__title">お問い合わせ</h2>
@@ -226,11 +256,11 @@
 
             <div class="field">
               <label class="field__label" for="message">お問い合わせ内容<span class="req">*</span></label>
-              <textarea class="field__textarea" id="message" name="message" rows="10" placeholder="こちらにご記入ください"
+              <textarea class="field__textarea" id="message" name="message" rows="10" placeholder="導入のご相談や動画制作・サービス説明をご希望の方、ご不明な点がある方はこちらへご入力ください"
                 required></textarea>
             </div>
 
-            <button class="contact__submit" type="submit">
+            <button class="contact__submit target" type="submit">
               送信する
               <img src="./assets/img/icon/expand_circle_right_white.svg" alt="" class="btn-icon">
             </button>
@@ -238,7 +268,21 @@
         </section>
       </main>
 
-       <div id="footer"></div>
+      <footer class="footer" aria-label="フッター">
+          <div class="footer_inner">
+              <a href="#top" class="footer__inner logo target">
+                  <img
+                  src="./assets/img/logo_yoko.webp"
+                  alt="VIDGET"
+                  />
+              </a>
+              <nav class="footer__nav target" aria-label="フッターナビ">
+                  <a href="#">個人情報保護方針</a>
+                  <a href="#">特定商取引法に基づく表記</a>
+              </nav>
+              <small>©  All Rights Reserved.</small>
+          </div>
+      </footer>
       <script src="./assets/js/main.js" defer></script>
     </div>
     <div class="sp-fixed-banner">
@@ -248,7 +292,7 @@
     </div>
 
     <aside class="pc-shell__right">
-      <a href="#contact" class="pc-shell__cta">
+      <a href="#contact" class="pc-shell__cta target">
         <img src="./assets/img/cta-button.webp" alt="資料請求キャンペーン">
       </a>
     </aside>

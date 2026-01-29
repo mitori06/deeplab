@@ -2,6 +2,14 @@ body{
     margin: 0;
 }
 
+.target {
+  transition: opacity 0.2s ease;
+}
+
+.target:hover {
+  opacity: 0.6;
+}
+
 .container{
     box-shadow: 0px 3px 6px 0px #9E9E9E;
   }
@@ -108,7 +116,7 @@ body{
 }
 
 /* ボタン（白ピル） */
-#cta .cta-btn{
+#cta .cta-btn {
   position: relative;          /* ←これが無いとアイコンが飛ぶ */
   display: flex;
   align-items: center;
@@ -128,6 +136,9 @@ body{
 
   box-shadow: 0 10px 24px rgba(0,0,0,.22);
 }
+
+
+
 
 /* 丸アイコン（巨大化防止含む） */
 #cta .cta-btnIcon{
@@ -426,7 +437,7 @@ body{
     border-top: 1px solid #002A5A;
 }
   
-.footer_inner{k
+.footer_inner{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -444,6 +455,13 @@ body{
     font-weight: 600;
     text-decoration: none;
     color: #000000;
+}
+
+.footer__nav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 
 /* =========================
@@ -475,22 +493,25 @@ body{
   }
   
   .thanks__btn{
-    display: block;
-    width: 80%;
-    max-width: 360px;   /* 大きすぎ防止（任意） */
-    margin: 0 auto;
-  
-    padding: 18px 0;
-    text-align: center;
-  
-    background: #fff;
-    border: 2px solid #002A5A;
-    border-radius: 999px;
-  
-    color: #002A5A;
-    font-size: 16px;
-    font-weight: 800;
-    text-decoration: none;
+  position: relative;          /* ←これが無いとアイコンが飛ぶ */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 80%;
+  height: 64px;
+  margin: 0px auto 48px;
+
+  background:#fff;
+  border-radius:999px;
+  border: 2px solid;
+  text-decoration:none;
+
+  color:#0b3a78;
+  font-size:16px;
+  font-weight:800;
+
+  box-shadow: 0 10px 24px rgba(0,0,0,.22);
   }
 
   /* 追従CTAバナー　初期状態：非表示（PC） */

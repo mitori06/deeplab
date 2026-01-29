@@ -16,9 +16,21 @@
 
   <link rel="preload" href="./assets/css/style.css" as="style" />
   <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <!-- フォント指定 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <div class="pc-shell">
+    <!-- 左 -->
+    <aside class="pc-shell__left">
+      <a href="#top">
+      <img src="./assets/img/logo_tate.webp" alt="WIDGET" class="pc-shell__logo target">
+      </a>
+    </aside>
     <div class="container">
         <header class="header">
             <div class="container header_inner">
@@ -67,13 +79,40 @@
               <div class="thanks__back">
                 <a href="./index.html#top" class="thanks__btn">
                   TOPへ戻る
+                  <img src="./assets/img/icon/expand_circle_right.svg" alt="" class="cta-btnIcon">
                 </a>
               </div>
             </section>
             </main>
                   
-        <div id="footer"></div>
-        <script src="./assets/js/main.js" defer></script>
+      <footer class="footer" aria-label="フッター">
+          <div class="footer_inner">
+              <a href="#top" class="footer__inner logo target">
+                  <img
+                  src="./assets/img/logo_yoko.webp"
+                  alt="VIDGET"
+                  />
+              </a>
+              <nav class="footer__nav target" aria-label="フッターナビ">
+                  <a href="#">個人情報保護方針</a>
+                  <a href="#">特定商取引法に基づく表記</a>
+              </nav>
+              <small>©  All Rights Reserved.</small>
+          </div>
+      </footer>
+      <script src="./assets/js/main.js" defer></script>
     </div>
+    <div class="sp-fixed-banner">
+      <a href="#contact">
+        <img src="./assets/img/cta_banner.webp" alt="資料請求はこちら">
+      </a>
+    </div>
+
+    <aside class="pc-shell__right">
+      <a href="#contact" class="pc-shell__cta target">
+        <img src="./assets/img/cta-button.webp" alt="資料請求キャンペーン">
+      </a>
+    </aside>
+  </div>
 </body>
 </html>
